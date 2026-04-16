@@ -539,11 +539,14 @@ a.contact-val:hover { color: var(--accent); }
   display: flex;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 .logo-banner img {
   max-height: 160px;
   width: auto;
   display: block;
+  margin: 0 auto;
   /* GIF rendered as-is — no filters applied */
 }
 @media (max-width: 640px) {
