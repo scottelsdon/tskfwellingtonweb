@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <title>Contact — TSKF Wellington</title>
+  <meta name="description" content="Contact TSKF Wellington Shotokan Karate. Get in touch to start your free 2-week trial or ask any questions.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><img src="images/logo.gif" alt="TSKF Wellington" class="nav-logo-img"></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="timetable.html">Timetable</a></li>
+      <li><a href="grading.html">Grading</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-hdr">
+  <div class="container">
+    <span class="eyebrow">Get In Touch</span>
+    <h1>Contact Us</h1>
+    <p>Questions about training? Want to start your free trial? We'd love to hear from you.</p>
+  </div>
+</div>
+
+<!-- CONTACT -->
+<section class="section">
+  <div class="container">
+    <div class="contact-layout">
+
+      <!-- Left: contact details -->
+      <div>
+        <span class="eyebrow">Contact Details</span>
+        <h2>Reach Us Directly</h2>
+        <div class="rule"></div>
+
+        <div class="contact-block">
+          <p class="contact-label">Grant Sensei (Head Instructor)</p>
+          <a href="tel:+6421238307" class="contact-val">021 123 8307</a>
+        </div>
+
+        <div class="contact-block">
+          <p class="contact-label">Jude (Club Secretary)</p>
+          <a href="tel:+6427243840" class="contact-val">027 243 0840</a>
+        </div>
+
+        <div class="contact-block">
+          <p class="contact-label">Email</p>
+          <a href="mailto:tskfwellington@gmail.com" class="contact-val">tskfwellington@gmail.com</a>
+        </div>
+
+        <div class="contact-block">
+          <p class="contact-label">Facebook</p>
+          <a href="https://www.facebook.com/TSKF.Wellington/" target="_blank" rel="noopener" class="contact-val" style="font-size:0.9rem;">facebook.com/TSKF.Wellington</a>
+        </div>
+
+        <div style="margin-top:2.5rem;">
+          <p class="contact-label">Main Training Venue</p>
+          <p style="color:var(--text);font-size:0.95rem;line-height:1.6;">Newlands Centennial Hall<br>212 Newlands Road<br>Newlands, Wellington</p>
+          <a href="https://maps.google.co.nz/?q=212+Newlands+Road+Newlands+Wellington" target="_blank" rel="noopener" style="display:inline-block;margin-top:0.75rem;font-size:0.8rem;color:var(--accent);text-decoration:none;">Open in Google Maps →</a>
+        </div>
+
+        <div class="info-box" style="margin-top:2.5rem;">
+          <p>New students are welcome to <strong style="color:var(--text)">try 2 weeks for free</strong>. Just show up to any Monday or Thursday session, or get in touch first if you'd like to know more.</p>
+        </div>
+      </div>
+
+      <!-- Right: contact form -->
+      <div>
+        <span class="eyebrow">Send a Message</span>
+        <h2>Drop Us a Line</h2>
+        <div class="rule"></div>
+        <p>Fill in the form below and we'll get back to you as soon as we can.</p>
+
+        <!--
+          FORM SETUP:
+          This form uses Formspree for email delivery.
+          To activate: sign up free at https://formspree.io, create a new form,
+          and replace YOUR_FORM_ID below with your actual form ID.
+          E.g. action="https://formspree.io/f/abcdefgh"
+        -->
+        <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" style="margin-top:1.5rem;" id="contactForm">
+          <div class="form-row">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Jane Smith" required>
+          </div>
+          <div class="form-row">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="jane@example.com" required>
+          </div>
+          <div class="form-row">
+            <label for="phone">Phone (optional)</label>
+            <input type="tel" id="phone" name="phone" placeholder="021 000 0000">
+          </div>
+          <div class="form-row">
+            <label for="interest">I'm interested in…</label>
+            <select id="interest" name="interest">
+              <option value="">Please select</option>
+              <option value="starting-karate">Starting karate (beginner)</option>
+              <option value="rejoining">Rejoining / resuming training</option>
+              <option value="family">Joining as a family</option>
+              <option value="junior">Junior / children's programme</option>
+              <option value="general">General enquiry</option>
+            </select>
+          </div>
+          <div class="form-row">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us a bit about yourself or what you'd like to know…"></textarea>
+          </div>
+          <button type="submit" class="btn-send">Send Message →</button>
+
+          <!-- Success / error messages -->
+          <p id="formSuccess" style="display:none;margin-top:1rem;color:#5a9a5a;font-size:0.88rem;">Thanks! Your message was sent. We'll be in touch shortly.</p>
+          <p id="formError" style="display:none;margin-top:1rem;color:var(--accent);font-size:0.88rem;">Something went wrong. Please try emailing us directly at <a href="mailto:tskfwellington@gmail.com" style="color:var(--accent)">tskfwellington@gmail.com</a>.</p>
+        </form>
+      </div>
+    </div>
+
+    <!-- Map -->
+    <div class="map-wrap">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2998.5!2d174.815!3d-41.222!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6d38b04a7c3a6b4f%3A0x0!2s212+Newlands+Road%2C+Newlands%2C+Wellington!5e0!3m2!1sen!2snz!4v1700000000000"
+        allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand"><span class="accent">TSKF</span> Wellington</p>
+        <p class="footer-tagline">Traditional Shotokan Karate-do Federation Wellington Dojo. Affiliated to ISKF. Training in Newlands, Wellington since 1992.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="timetable.html">Timetable</a></li>
+          <li><a href="grading.html">Grading</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/TSKF.Wellington/" target="_blank" rel="noopener">TSKF Wellington FB</a></li>
+          <li><a href="https://www.facebook.com/tskf.newzealand/" target="_blank" rel="noopener">TSKF NZ FB</a></li>
+          <li><a href="http://iskf.com" target="_blank" rel="noopener">ISKF International</a></li>
+          <li><a href="mailto:tskfwellington@gmail.com">Email Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 TSKF Wellington Dojo</span>
+      <a href="https://www.facebook.com/TSKF.Wellington/" target="_blank" rel="noopener" class="footer-fb">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+
+  // Formspree AJAX submit (shows success/error inline)
+  const form = document.getElementById('contactForm');
+  if (form) {
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = form.querySelector('.btn-send');
+      btn.textContent = 'Sending…';
+      btn.disabled = true;
+      try {
+        const res = await fetch(form.action, {
+          method: 'POST',
+          body: new FormData(form),
+          headers: { Accept: 'application/json' }
+        });
+        if (res.ok) {
+          form.reset();
+          document.getElementById('formSuccess').style.display = 'block';
+          document.getElementById('formError').style.display = 'none';
+        } else {
+          throw new Error('bad response');
+        }
+      } catch {
+        document.getElementById('formError').style.display = 'block';
+        document.getElementById('formSuccess').style.display = 'none';
+      }
+      btn.textContent = 'Send Message →';
+      btn.disabled = false;
+    });
+  }
+</script>
+</body>
+</html>

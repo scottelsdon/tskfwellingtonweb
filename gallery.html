@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090909">
+  <title>Gallery — TSKF Wellington</title>
+  <meta name="description" content="Photos from TSKF Wellington Shotokan Karate — training sessions, competitions, gradings and events.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="site-nav">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-brand"><img src="images/logo.gif" alt="TSKF Wellington" class="nav-logo-img"></a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="timetable.html">Timetable</a></li>
+      <li><a href="grading.html">Grading</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- PAGE HEADER -->
+<div class="page-hdr">
+  <div class="container">
+    <span class="eyebrow">Photos</span>
+    <h1>Gallery</h1>
+    <p>Training sessions, gradings, competitions and events — from the dojo to the national stage.</p>
+  </div>
+</div>
+
+<!-- GALLERY -->
+<section class="section">
+  <div class="container">
+    <span class="eyebrow">All Photos</span>
+    <h2>Dojo Life</h2>
+    <div class="rule"></div>
+    <p>Click any photo to view full size. Use arrow keys or the buttons to navigate.</p>
+
+    <!-- ============================================================
+         GALLERY PHOTOS
+         To add a photo: copy the file into the images/ folder, then
+         add a new line to the PHOTOS array below.
+         To remove a photo: delete the line from the array.
+         ============================================================ -->
+    <div class="gallery-grid" id="galleryGrid"></div>
+  </div>
+</section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">✕ Close</button>
+  <button class="lb-prev" id="lbPrev">&#8592;</button>
+  <img class="lb-img" id="lbImg" src="" alt="">
+  <button class="lb-next" id="lbNext">&#8594;</button>
+  <p class="lb-counter" id="lbCounter"></p>
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <p class="footer-brand"><span class="accent">TSKF</span> Wellington</p>
+        <p class="footer-tagline">Traditional Shotokan Karate-do Federation Wellington Dojo. Affiliated to ISKF. Training in Newlands, Wellington since 1992.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Pages</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="timetable.html">Timetable</a></li>
+          <li><a href="grading.html">Grading</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://www.facebook.com/TSKF.Wellington/" target="_blank" rel="noopener">TSKF Wellington FB</a></li>
+          <li><a href="https://www.facebook.com/tskf.newzealand/" target="_blank" rel="noopener">TSKF NZ FB</a></li>
+          <li><a href="http://iskf.com" target="_blank" rel="noopener">ISKF International</a></li>
+          <li><a href="mailto:tskfwellington@gmail.com">Email Us</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 TSKF Wellington Dojo</span>
+      <a href="https://www.facebook.com/TSKF.Wellington/" target="_blank" rel="noopener" class="footer-fb">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+        Facebook
+      </a>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // ============================================================
+  // PHOTOS ARRAY — edit this list to add / remove photos.
+  // Files must be in the images/ folder alongside this HTML file.
+  // ============================================================
+        const PHOTOS = [
+    "001.jpg",
+    "002.jpg",
+    "003.jpg",
+    "004.jpg",
+    "005.jpg",
+    "006.jpg",
+    "007.jpg",
+    "008.jpg",
+    "009.jpg",
+    "010.jpg",
+    "011.jpg",
+    "012.jpg",
+    "013.jpg",
+    "014.jpg",
+    "015.jpg",
+    "016.jpg",
+    "017.jpg",
+    "018.jpg",
+    "019.jpg",
+    "020.jpg",
+    "021.jpg",
+    "022.jpg",
+    "023.jpg",
+    "024.jpg",
+    "025.jpg",
+    "026.jpg",
+    "027.jpg",
+    "028.jpg",
+    "029.jpg",
+    "030.jpg",
+    "031.jpg",
+    "032.jpg",
+    "033.jpg",
+    "034.jpg",
+    "035.jpg",
+    "036.jpg",
+    "037.jpg",
+    "038.jpg",
+    "039.jpg",
+    "040.jpg",
+    "041.jpg",
+    "042.jpg",
+    "043.jpg",
+    "044.jpg",
+    "045.jpg",
+    "046.jpg",
+    "047.jpg",
+    "048.jpg",
+    "049.jpg",
+    "050.jpg",
+    "051.jpg",
+    "052.jpg",
+    "053.jpg",
+    "054.jpg",
+    "055.jpg",
+    "056.jpg",
+    "057.jpg",
+    "058.jpg",
+    "059.jpg"
+  ];
+
+  function enc(f) { return f; }  // filenames are clean numbers — no encoding needed
+
+  // Build grid
+  const grid = document.getElementById('galleryGrid');
+  PHOTOS.forEach((f, i) => {
+    const item = document.createElement('div');
+    item.className = 'gallery-item';
+    const img = document.createElement('img');
+    img.src = 'images/' + enc(f);
+    img.alt = 'Photo ' + (i + 1);
+    img.loading = 'lazy';
+    item.appendChild(img);
+    item.addEventListener('click', () => openLightbox(i));
+    grid.appendChild(item);
+  });
+
+  // Lightbox
+  let current = 0;
+  const lb     = document.getElementById('lightbox');
+  const lbImg  = document.getElementById('lbImg');
+  const lbCtr  = document.getElementById('lbCounter');
+
+  function openLightbox(i) {
+    current = i;
+    updateLb();
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeLightbox() {
+    lb.classList.remove('open');
+    document.body.style.overflow = '';
+  }
+  function updateLb() {
+    lbImg.src = 'images/' + enc(PHOTOS[current]);
+    lbCtr.textContent = (current + 1) + ' / ' + PHOTOS.length;
+  }
+  function prev() { current = (current - 1 + PHOTOS.length) % PHOTOS.length; updateLb(); }
+  function next() { current = (current + 1) % PHOTOS.length; updateLb(); }
+
+  document.getElementById('lbClose').addEventListener('click', closeLightbox);
+  document.getElementById('lbPrev').addEventListener('click', prev);
+  document.getElementById('lbNext').addEventListener('click', next);
+  lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+  document.addEventListener('keydown', e => {
+    if (!lb.classList.contains('open')) return;
+    if (e.key === 'Escape')     closeLightbox();
+    if (e.key === 'ArrowLeft')  prev();
+    if (e.key === 'ArrowRight') next();
+  });
+
+  // Nav toggle
+  document.getElementById('navToggle').addEventListener('click', function() {
+    document.getElementById('navMenu').classList.toggle('open');
+  });
+</script>
+</body>
+</html>
