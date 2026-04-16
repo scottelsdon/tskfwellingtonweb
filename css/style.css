@@ -23,7 +23,7 @@ a { color: inherit; }
   --text-2:    #938980;
   --border:    #202020;
   --max-w:     1120px;
-  --nav-h:     62px;
+  --nav-h:     96px;
 }
 
 /* === Base === */
@@ -106,7 +106,7 @@ p { color: var(--text-2); }
 /* === HERO (home) === */
 .hero {
   position: relative;
-  min-height: 72vh;
+  min-height: 52vh;
   display: flex; align-items: center;
   overflow: hidden;
 }
@@ -519,7 +519,7 @@ a.contact-val:hover { color: var(--accent); }
 
 /* === NAV LOGO === */
 .nav-logo-img {
-  height: 42px;
+  height: 84px;
   width: auto;
   display: inline-block;
   vertical-align: middle;
