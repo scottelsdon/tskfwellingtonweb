@@ -512,7 +512,7 @@ a.contact-val:hover { color: var(--accent); }
 .instructor-portrait {
   width: 144px; height: 180px; object-fit: cover; object-position: top;
   border: 1px solid var(--border); flex-shrink: 0;
-  margin-bottom: 1rem;
+  display: block; margin: 0 auto 1rem;
 }
 
 /* === LOGO (hero) === */
