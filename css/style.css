@@ -245,9 +245,10 @@ p { color: var(--text-2); }
 .instructor-dan {
   font-family: 'Cinzel', serif; font-size: 0.62rem; letter-spacing: 0.28em;
   text-transform: uppercase; color: var(--gold); margin-bottom: 0.3rem;
+  text-align: center;
 }
-.instructor-name { font-family: 'Cinzel', serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.25rem; }
-.instructor-role { font-size: 0.82rem; color: var(--accent); margin-bottom: 1rem; }
+.instructor-name { font-family: 'Cinzel', serif; font-size: 1.2rem; font-weight: 600; margin-bottom: 0.25rem; text-align: center; }
+.instructor-role { font-size: 0.82rem; color: var(--accent); margin-bottom: 1rem; text-align: center; }
 .instructor-bio { font-size: 0.9rem; color: var(--text-2); line-height: 1.65; }
 
 /* === BELT TABLE === */
