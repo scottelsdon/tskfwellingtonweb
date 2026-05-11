@@ -1,0 +1,8 @@
+# Editor backup files
+*~
+*.bak
+
+# OS metadata
+Thumbs.db
+.DS_Store
+desktop.ini
