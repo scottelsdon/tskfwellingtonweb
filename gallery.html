@@ -130,76 +130,64 @@
   // PHOTOS ARRAY — edit this list to add / remove photos.
   // Files must be in the images/ folder alongside this HTML file.
   // ============================================================
-        const PHOTOS = [
-    "001.jpg",
-    "002.jpg",
-    "004.jpg",
-    "005.jpg",
-    "006.jpg",
-    "007.jpg",
-    "008.jpg",
-    "009.jpg",
-    "010.jpg",
-    "011.jpg",
-    "012.jpg",
-    "013.jpg",
-    "014.jpg",
-    "015.jpg",
-    "016.jpg",
-    "017.jpg",
-    "018.jpg",
-    "019.jpg",
-    "020.jpg",
-    "021.jpg",
-    "022.jpg",
-    "023.jpg",
-    "024.jpg",
-    "025.jpg",
-    "026.jpg",
-    "027.jpg",
-    "028.jpg",
-    "029.jpg",
-    "030.jpg",
-    "031.jpg",
-    "032.jpg",
-    "033.jpg",
-    "035.jpg",
-    "036.jpg",
-    "037.jpg",
-    "038.jpg",
-    "039.jpg",
-    "040.jpg",
-    "041.jpg",
-    "042.jpg",
-    "043.jpg",
-    "044.jpg",
-    "045.jpg",
-    "046.jpg",
-    "047.jpg",
-    "048.jpg",
-    "049.jpg",
-    "050.jpg",
-    "051.jpg",
-    "052.jpg",
-    "053.jpg",
-    "054.jpg",
-    "055.jpg",
-    "056.jpg",
-    "057.jpg",
-    "058.jpg",
-    "059.jpg"
+  const PHOTOS = [
+    "2008 - Takahashi Shihan @ CP School grading 1.jpg",
+    "2008 - Takahashi Shihan @ CP School grading 2.jpg",
+    "2010 - Japan Gasshuku with Wgtn students & shihan 1.jpg",
+    "2010 - Japan Gasshuku with Wgtn students & shihan 2.jpg",
+    "2010 - TSKF NZ & Australia Japan Gasshuku.jpg",
+    "2011 - TSKF Wellington Takahashi Shihan seminar.jpg",
+    "2012 - TSKF NZ Seminar Turangi Takahashi Shihan.jpg",
+    "2012 - TSKF NZ Taupo Nationals.jpg",
+    "2012 - Takahashi Shihan @ Wgtn Dojo.jpg",
+    "2012 - Taupo TSKF NZ Nationals.jpg",
+    "2013 - Bryn Wgtn student competing Turangi.jpg",
+    "2013 - Cam Wgtn Student competing Kata in Turangi.jpg",
+    "2013 - Grant Sensei @ Turangi with Wgtn Dojo grade to 5th dan.jpg",
+    "2013 - Lennex kata competing Turangi.jpg",
+    "2013 - TSKF Himatangi Wellington seminar.jpg",
+    "2014 - Cara Wgtn studetn competing @ Turangi.jpg",
+    "2014 - Katy Stove Wgtn Dojo competing.jpg",
+    "2014 - Taupo TSKF NZ Nationals.jpg",
+    "2014 - Turangi seminar Wgtn students.jpg",
+    "2015 - Jude, Peter & Katy @ Kapiti seminar.jpg",
+    "2015 - Kristian Wgen student competing New Plymouth.jpg",
+    "2015 - Takahashi Shihan @ Khandallah Hall grading.jpg",
+    "2015 - Takahashi Shihan @ Khandallah Hall.jpg",
+    "2015 - Takahashi Shihan in Turangi @ Nationals.jpg",
+    "2015 - Willis Shihan @ Wellington seminar grading.jpg",
+    "2016 - Grant Stove presented with 6th Dan by Willis Shihan.jpg",
+    "2016 - Kristian @ Southern Seminar Team kata.jpg",
+    "2016 - Southern Seminar with Willis Shihan.jpg",
+    "2017 - Jude & TSKF NZ Students with Japanese Sensei in Hakone.jpg",
+    "2017 - TSKF Raglan summer seminar.jpg",
+    "2017 - Wgtn Dojo Kyu grading @ Centennial Hall.jpg",
+    "2017 - Willis Shihan & TSKF NZ Students @ Hakone Japan.jpg",
+    "2017 - Willis Shihan & TSKF NZ Students @ Hakone Japan (2).jpg",
+    "2018 - Lennex competing in Kata New Plymouth.jpg",
+    "2018 - New Plymouth Judging panel Southerns.jpg",
+    "2018 - Wgtn Students @ Kyu grading.jpg",
+    "2021 - 2021 first january karate - Wgtn dojo Centenntial.jpg",
+    "2021 - Grant Stove & Centennial Hall training.jpg",
+    "2021 - Willis Shihan, Wgtn Dojo & Kapiti seminar.jpg",
+    "2022 - Turangi Seminar for TSKF NZ Tshirts.jpg",
+    "2023 - TSKF Wgtn seminar Willis Shihan grading.jpg",
+    "2026 - Jude & Rio @ Caloundra TSKF Australia seminar & Mrs Willis.jpg"
   ];
 
-  function enc(f) { return f; }  // filenames are clean numbers — no encoding needed
+  function enc(f) { return encodeURIComponent(f); }  // filenames contain spaces & symbols — encode for URL
 
   // Build grid
   const grid = document.getElementById('galleryGrid');
+  function caption(f) { return f.replace(/\.[^.]+$/, ''); }  // filename without extension
+
   PHOTOS.forEach((f, i) => {
     const item = document.createElement('div');
     item.className = 'gallery-item';
     const img = document.createElement('img');
     img.src = 'images/' + enc(f);
-    img.alt = 'Photo ' + (i + 1);
+    img.alt = caption(f);
+    img.title = caption(f);
     img.loading = 'lazy';
     item.appendChild(img);
     item.addEventListener('click', () => openLightbox(i));
@@ -224,6 +212,8 @@
   }
   function updateLb() {
     lbImg.src = 'images/' + enc(PHOTOS[current]);
+    lbImg.alt = caption(PHOTOS[current]);
+    lbImg.title = caption(PHOTOS[current]);
     lbCtr.textContent = (current + 1) + ' / ' + PHOTOS.length;
   }
   function prev() { current = (current - 1 + PHOTOS.length) % PHOTOS.length; updateLb(); }
