@@ -28,6 +28,9 @@
   <meta name="twitter:description" content="Shotokan Karate grading information for TSKF Wellington. Belt ranks, grading schedule and what to expect.">
   <meta name="twitter:image" content="https://tskfwellington.club/og-image.jpg">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
   <link rel="stylesheet" href="css/style.css">
   <style>
     /* Belt colour swatches */
@@ -201,13 +204,19 @@
 </section>
 
 <!-- GRADING EVENTS -->
-<section class="section">
+<section class="section" id="events">
   <div class="container">
     <span class="eyebrow">Events Calendar</span>
     <h2>Seminars &amp; Competitions</h2>
     <div class="rule"></div>
     <p>TSKF Wellington participates in seminars, gradings, and competitions throughout New Zealand and internationally. Participation is encouraged for all grades.</p>
 
+    <!--
+      Annual events below have no date and always show.
+      To add a one-off dated event (e.g. the next grading), copy a row and add
+      data-date="YYYY-MM-DD" to it; it is hidden automatically once that day has passed (NZ time):
+        <div class="event-row" data-date="2027-03-14"> ... </div>
+    -->
     <div class="events-list">
 
       <div class="event-row">
@@ -221,7 +230,7 @@
         <p class="event-month">April</p>
         <div>
           <p class="event-title">TSKF/ISKF National Seminar &amp; Championships — Turangi</p>
-          <p class="event-detail">Hosted by Mark Willis Shihan. Seminar followed by competition for attendees only. Accommodation at Turangi Junction recommended.</p>
+          <p class="event-detail">Hosted by Mark Willis Shihan. Seminar followed by competition for attendees only. Accommodation at Tongariro Junction Holiday Park, Turangi is recommended — mention TSKF NZ Karate Family.</p>
         </div>
       </div>
       <div class="event-row">
@@ -235,7 +244,7 @@
         <p class="event-month">October</p>
         <div>
           <p class="event-title">TSKF/ISKF NZ Gasshuku — Turangi</p>
-          <p class="event-detail">Labour Weekend. Residential event at Tongariro Junction Holiday Park. Families welcome. TSKF/ISKF NZ members only for seminar and competition.</p>
+          <p class="event-detail">Labour Weekend. Residential event — attendees stay and eat at Tongariro Junction Holiday Park, Turangi. Families welcome. TSKF/ISKF NZ members only for seminar and competition.</p>
         </div>
       </div>
       <div class="event-row">

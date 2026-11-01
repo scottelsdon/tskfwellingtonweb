@@ -3,7 +3,7 @@
    Traditional Shotokan Karate-do Federation Wellington Dojo
    ============================================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+/* Fonts (Cinzel, Lora) are loaded by a <link> in each page head. */
 
 /* === Reset === */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -112,7 +112,7 @@ p { color: var(--text-2); }
 }
 .hero-bg {
   position: absolute; inset: 0;
-  background-image: url('images/2022%20-%20Turangi%20Seminar%20for%20TSKF%20NZ%20Tshirts.jpg');
+  background-image: url('../images/2022%20-%20Turangi%20Seminar%20for%20TSKF%20NZ%20Tshirts.jpg');
   background-size: cover; background-position: center 35%;
   opacity: 0.15;
 }

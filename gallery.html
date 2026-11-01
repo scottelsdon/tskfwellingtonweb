@@ -28,6 +28,9 @@
   <meta name="twitter:description" content="Photos from TSKF Wellington Shotokan Karate — training sessions, competitions, gradings and events.">
   <meta name="twitter:image" content="https://tskfwellington.club/og-image.jpg">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -70,7 +73,7 @@
     <!-- ============================================================
          GALLERY PHOTOS
          To add a photo: copy the file into the images/ folder, then
-         add a new line to the PHOTOS array below.
+         add a new line to the PHOTOS array below (see the note there).
          To remove a photo: delete the line from the array.
          ============================================================ -->
     <div class="gallery-grid" id="galleryGrid"></div>
@@ -128,66 +131,66 @@
 <script>
   // ============================================================
   // PHOTOS ARRAY — edit this list to add / remove photos.
-  // Files must be in the images/ folder alongside this HTML file.
+  // Each entry is [filename, description]. Full-size files go in images/,
+  // and a 400px copy with the same name in images/thumbs/ (shown in the grid).
   // ============================================================
   const PHOTOS = [
-    "2008 - Takahashi Shihan @ CP School grading 1.jpg",
-    "2008 - Takahashi Shihan @ CP School grading 2.jpg",
-    "2010 - Japan Gasshuku with Wgtn students & shihan 1.jpg",
-    "2010 - Japan Gasshuku with Wgtn students & shihan 2.jpg",
-    "2010 - TSKF NZ & Australia Japan Gasshuku.jpg",
-    "2011 - TSKF Wellington Takahashi Shihan seminar.jpg",
-    "2012 - TSKF NZ Seminar Turangi Takahashi Shihan.jpg",
-    "2012 - TSKF NZ Taupo Nationals.jpg",
-    "2012 - Takahashi Shihan @ Wgtn Dojo.jpg",
-    "2012 - Taupo TSKF NZ Nationals.jpg",
-    "2013 - Bryn Wgtn student competing Turangi.jpg",
-    "2013 - Cam Wgtn Student competing Kata in Turangi.jpg",
-    "2013 - Grant Sensei @ Turangi with Wgtn Dojo grade to 5th dan.jpg",
-    "2013 - Lennex kata competing Turangi.jpg",
-    "2013 - TSKF Himatangi Wellington seminar.jpg",
-    "2014 - Cara Wgtn studetn competing @ Turangi.jpg",
-    "2014 - Katy Stove Wgtn Dojo competing.jpg",
-    "2014 - Taupo TSKF NZ Nationals.jpg",
-    "2014 - Turangi seminar Wgtn students.jpg",
-    "2015 - Jude, Peter & Katy @ Kapiti seminar.jpg",
-    "2015 - Kristian Wgen student competing New Plymouth.jpg",
-    "2015 - Takahashi Shihan @ Khandallah Hall grading.jpg",
-    "2015 - Takahashi Shihan @ Khandallah Hall.jpg",
-    "2015 - Takahashi Shihan in Turangi @ Nationals.jpg",
-    "2015 - Willis Shihan @ Wellington seminar grading.jpg",
-    "2016 - Grant Stove presented with 6th Dan by Willis Shihan.jpg",
-    "2016 - Kristian @ Southern Seminar Team kata.jpg",
-    "2016 - Southern Seminar with Willis Shihan.jpg",
-    "2017 - Jude & TSKF NZ Students with Japanese Sensei in Hakone.jpg",
-    "2017 - TSKF Raglan summer seminar.jpg",
-    "2017 - Wgtn Dojo Kyu grading @ Centennial Hall.jpg",
-    "2017 - Willis Shihan & TSKF NZ Students @ Hakone Japan.jpg",
-    "2017 - Willis Shihan & TSKF NZ Students @ Hakone Japan (2).jpg",
-    "2018 - Lennex competing in Kata New Plymouth.jpg",
-    "2018 - New Plymouth Judging panel Southerns.jpg",
-    "2018 - Wgtn Students @ Kyu grading.jpg",
-    "2021 - 2021 first january karate - Wgtn dojo Centenntial.jpg",
-    "2021 - Grant Stove & Centennial Hall training.jpg",
-    "2021 - Willis Shihan, Wgtn Dojo & Kapiti seminar.jpg",
-    "2022 - Turangi Seminar for TSKF NZ Tshirts.jpg",
-    "2023 - TSKF Wgtn seminar Willis Shihan grading.jpg",
-    "2026 - Jude & Rio @ Caloundra TSKF Australia seminar & Mrs Willis.jpg"
+    ["2008 - Takahashi Shihan @ CP School grading 1.jpg", "Takahashi Shihan watching yellow-belt students at an outdoor grading, 2008"],
+    ["2008 - Takahashi Shihan @ CP School grading 2.jpg", "Students bowing in two lines on a school deck at a 2008 grading with Takahashi Shihan"],
+    ["2010 - Japan Gasshuku with Wgtn students & shihan 1.jpg", "Five black belts in front of the NZ flag and TSKF banner at the 2010 Japan gasshuku"],
+    ["2010 - Japan Gasshuku with Wgtn students & shihan 2.jpg", "Karateka training in lines on a grass field at the 2010 Japan gasshuku"],
+    ["2010 - TSKF NZ & Australia Japan Gasshuku.jpg", "TSKF New Zealand and Australia members in team shirts, Japan gasshuku 2010"],
+    ["2011 - TSKF Wellington Takahashi Shihan seminar.jpg", "Students lined up in a wooden-floored hall at a 2011 Wellington seminar with Takahashi Shihan"],
+    ["2012 - TSKF NZ Seminar Turangi Takahashi Shihan.jpg", "Large group photo of the 2012 TSKF NZ seminar in Turangi with Takahashi Shihan"],
+    ["2012 - TSKF NZ Taupo Nationals.jpg", "Competitors seated on mats in a stadium at the 2012 TSKF NZ Nationals in Taupō"],
+    ["2012 - Takahashi Shihan @ Wgtn Dojo.jpg", "Takahashi Shihan with Wellington dojo students of all ages, 2012"],
+    ["2012 - Taupo TSKF NZ Nationals.jpg", "Wellington team with medals and club sign at the 2012 Nationals in Taupō"],
+    ["2013 - Bryn Wgtn student competing Turangi.jpg", "Bryn, a Wellington student, in a kata stance in front of judges at Turangi, 2013"],
+    ["2013 - Cam Wgtn Student competing Kata in Turangi.jpg", "Cam, a Wellington student, performing a kata kick at Turangi, 2013"],
+    ["2013 - Grant Sensei @ Turangi with Wgtn Dojo grade to 5th dan.jpg", "Grant Sensei holding his 5th Dan certificate with Wellington dojo members, Turangi 2013"],
+    ["2013 - Lennex kata competing Turangi.jpg", "Lennex mid-air in a jumping kata at Turangi, 2013"],
+    ["2013 - TSKF Himatangi Wellington seminar.jpg", "Seminar group lined up in a hall at the 2013 Himatangi seminar"],
+    ["2014 - Cara Wgtn student competing @ Turangi.jpg", "Cara, a Wellington student, performing kata before a judging table at Turangi, 2014"],
+    ["2014 - Katy Stove Wgtn Dojo competing.jpg", "Katy Stove in blue mitts during a kumite match, 2014"],
+    ["2014 - Taupo TSKF NZ Nationals.jpg", "Rows of karateka training in a stadium at the 2014 Nationals in Taupō"],
+    ["2014 - Turangi seminar Wgtn students.jpg", "Wellington black belts in front of the TSKF banner at the 2014 Turangi seminar"],
+    ["2015 - Jude, Peter & Katy @ Kapiti seminar.jpg", "Jude, Peter and Katy practising techniques at the 2015 Kāpiti seminar"],
+    ["2015 - Kristian Wgtn student competing New Plymouth.jpg", "Kristian, a young Wellington student, performing kata on blue mats in New Plymouth, 2015"],
+    ["2015 - Takahashi Shihan @ Khandallah Hall grading.jpg", "Students holding grading certificates with Takahashi Shihan at Khandallah Hall, 2015"],
+    ["2015 - Takahashi Shihan @ Khandallah Hall.jpg", "Takahashi Shihan with a large group of students at Khandallah Hall, 2015"],
+    ["2015 - Takahashi Shihan in Turangi @ Nationals.jpg", "Group photo with Takahashi Shihan at the 2015 Nationals in Turangi"],
+    ["2015 - Willis Shihan @ Wellington seminar grading.jpg", "Willis Shihan with Wellington students after a 2015 seminar grading"],
+    ["2016 - Grant Stove presented with 6th Dan by Willis Shihan.jpg", "Willis Shihan presenting Grant Stove with his 6th Dan certificate, 2016"],
+    ["2016 - Kristian @ Southern Seminar Team kata.jpg", "Kristian and two junior team-mates after team kata at the 2016 Southern Seminar"],
+    ["2016 - Southern Seminar with Willis Shihan.jpg", "Group photo with certificates at the 2016 Southern Seminar with Willis Shihan"],
+    ["2017 - Jude & TSKF NZ Students with Japanese Sensei in Hakone.jpg", "Jude and TSKF NZ black belts with a Japanese sensei in Hakone, 2017"],
+    ["2017 - TSKF Raglan summer seminar.jpg", "Seminar members training in the sea at the 2017 Raglan summer seminar"],
+    ["2017 - Wgtn Dojo Kyu grading @ Centennial Hall.jpg", "Wellington students with grading certificates at Newlands Centennial Hall, 2017"],
+    ["2017 - Willis Shihan & TSKF NZ Students @ Hakone Japan.jpg", "Willis Shihan and TSKF NZ students posed by a red torii gate in Hakone, Japan, 2017"],
+    ["2017 - Willis Shihan & TSKF NZ Students @ Hakone Japan (2).jpg", "Willis Shihan and TSKF NZ students in front of NZ, Australian and Japanese banners in Hakone, 2017"],
+    ["2018 - Lennex competing in Kata New Plymouth.jpg", "Lennex performing a kata kick on competition mats in New Plymouth, 2018"],
+    ["2018 - New Plymouth Judging panel Southerns.jpg", "The judging panel bowing at the 2018 Southern Championships in New Plymouth"],
+    ["2018 - Wgtn Students @ Kyu grading.jpg", "Wellington students holding kyu grading certificates with their instructors, 2018"],
+    ["2021 - First January karate - Wgtn dojo Centennial.jpg", "Wellington black belts at the first training of January 2021, Centennial Hall"],
+    ["2021 - Grant Stove & Centennial Hall training.jpg", "Grant Stove leading a training drill at Newlands Centennial Hall, 2021"],
+    ["2021 - Willis Shihan, Wgtn Dojo & Kapiti seminar.jpg", "Group photo from the October 2021 Wellington seminar with Willis Shihan"],
+    ["2022 - Turangi Seminar for TSKF NZ Tshirts.jpg", "Members in matching TSKF NZ T-shirts at the 2022 Turangi seminar"],
+    ["2023 - TSKF Wgtn seminar Willis Shihan grading.jpg", "Wellington students with grading certificates after the 2023 seminar with Willis Shihan"],
+    ["2026 - Jude & Rio @ Caloundra TSKF Australia seminar & Mrs Willis.jpg", "Jude, Rio and Mrs Willis in front of the TSKF Wellington banner at the 2026 Caloundra seminar"]
   ];
 
   function enc(f) { return encodeURIComponent(f); }  // filenames contain spaces & symbols — encode for URL
 
   // Build grid
   const grid = document.getElementById('galleryGrid');
-  function caption(f) { return f.replace(/\.[^.]+$/, ''); }  // filename without extension
 
-  PHOTOS.forEach((f, i) => {
+  PHOTOS.forEach(([f, alt], i) => {
     const item = document.createElement('div');
     item.className = 'gallery-item';
     const img = document.createElement('img');
-    img.src = 'images/' + enc(f);
-    img.alt = caption(f);
-    img.title = caption(f);
+    img.src = 'images/thumbs/' + enc(f);
+    img.alt = alt;
+    img.title = alt;
     img.loading = 'lazy';
     item.appendChild(img);
     item.addEventListener('click', () => openLightbox(i));
@@ -211,9 +214,10 @@
     document.body.style.overflow = '';
   }
   function updateLb() {
-    lbImg.src = 'images/' + enc(PHOTOS[current]);
-    lbImg.alt = caption(PHOTOS[current]);
-    lbImg.title = caption(PHOTOS[current]);
+    const [f, alt] = PHOTOS[current];
+    lbImg.src = 'images/' + enc(f);
+    lbImg.alt = alt;
+    lbImg.title = alt;
     lbCtr.textContent = (current + 1) + ' / ' + PHOTOS.length;
   }
   function prev() { current = (current - 1 + PHOTOS.length) % PHOTOS.length; updateLb(); }
